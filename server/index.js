@@ -7,6 +7,8 @@ import dotenv from "dotenv"
 import helmet from "helmet"
 import morgan from "morgan"
 import kpiRoutes from "./routes/kpi.js"
+import KPI from "./models/KPI.js"
+import { kpis } from "./data/data.js"
 
 /* CONFIGURATIONS */
 dotenv.config()
@@ -30,6 +32,12 @@ mongoose
   .connect(process.env.MONGO_URL)
   .then(async () => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`))
+
+    /* ADD DAATA ONE TIME ONLY OR AS NEEDED */
+    // await mongoose.connection.db.dropDatabase() 
+    // doing this only for testing because we want to continuously reset the DB
+    // KPI.insertMany(kpis)
+
   })
   .catch((error) => console.log(`${error} did not connect`))
 
