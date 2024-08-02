@@ -36,7 +36,7 @@ mongoose
   .then(async () => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`))
 
-    /* ADD DAATA ONE TIME ONLY OR AS NEEDED */
+    /* ADD DATA ONE TIME ONLY OR AS NEEDED */
     // await mongoose.connection.db.dropDatabase() 
     // doing this only for testing because we want to continuously reset the DB
     // KPI.insertMany(kpis)
