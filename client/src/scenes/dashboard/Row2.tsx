@@ -124,6 +124,7 @@ const Row2 = () => {
                 <Cell
                   key={`cell-${index}`}
                   fill={pieColors[index]}
+                  id={entry && entry.name}
                 />
               ))}
             </Pie>

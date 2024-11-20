@@ -30,8 +30,6 @@ app.use("/kpi", kpiRoutes)
 app.use("/product", productRoutes)
 app.use("/transaction", transactionRoutes)
 
-console.log("hello")
-
 /* MONGOOSE SETUP */ 
 const PORT = process.env.PORT || 9000
 mongoose
